@@ -83,7 +83,7 @@ function ProdukInfo(props) {
 }
 
 function TambahJourney(e){
-  return console.log("membeli....." + e);
+  return alert('kamu telah membeli tiket ke ' + e);
 }
 
 export default App;
