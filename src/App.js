@@ -13,7 +13,7 @@ function App() {
     <div className="Parentbox">
 
     <FotoProduk />
-    <ProdukInfo />
+    <ProdukInfo category = "Indonesia" />
 
      { 
      /* 
@@ -37,8 +37,8 @@ function FotoProduk() {
 }
 
 
-function ProdukInfo() {
-  const category = "INDONESIA";
+function ProdukInfo(props) {
+  const {category} = props ;
   return (
     
     <div className="Deskripsi">
