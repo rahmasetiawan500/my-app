@@ -15,6 +15,24 @@ function App() {
     <FotoProduk />
     <ProdukInfo isDiscount = "comming" name= "Ubud, Bali" category = "Indonesia" />
 
+      <div className="Review-box">
+        <h2>Reviews</h2>
+        <div className="Item">
+          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+          <div className="User">
+
+          <h3>Zuma Frog</h3>
+          <p>liburan asik senang bersama keluarga dibantu rhstravel</p>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
      { 
      /* 
      a + b / 1 
