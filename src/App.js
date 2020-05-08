@@ -48,10 +48,16 @@ function ProdukInfo(props) {
     <p className="Info">
     Aliqua et laboris adipisicing adipisicing sint est adipisicing tempor. Aliqua do in nulla ullamco proident. Nisi voluptate qui sunt elit eu pariatur sint sint ex ipsum. Labore sint ullamco officia commodo est. Voluptate eu et voluptate pariatur in. Lorem duis aliqua aliquip incididunt cillum amet.
     </p>
+    <a onClick={TambahJourney}>Add to Journey</a>
     </div>
+    
 
       );
   
+}
+
+function TambahJourney(){
+  return console.log("membeli.....");
 }
 
 export default App;
