@@ -56,6 +56,10 @@ return (
 
 function ProdukInfo(props) {
   const {category, name, isDiscount} = props ;
+  const benefits = ["Makanan Khas Bali", "Terdapat Wifi", "Banyak Akses dituju"];
+  const listItems = benefits.map((benefits) =>
+  <li>{benefits}</li>
+);
   return (
     
     <div className="Deskripsi">
@@ -66,6 +70,9 @@ function ProdukInfo(props) {
     <p className="Info">
     Aliqua et laboris adipisicing adipisicing sint est adipisicing tempor. Aliqua do in nulla ullamco proident. Nisi voluptate qui sunt elit eu pariatur sint sint ex ipsum. Labore sint ullamco officia commodo est. Voluptate eu et voluptate pariatur in. Lorem duis aliqua aliquip incididunt cillum amet.
     </p>
+    <ul>
+    {listItems}
+    </ul>
     <a onClick={(e) =>TambahJourney(name, e)}>Add to Journey</a>
     </div>
     
