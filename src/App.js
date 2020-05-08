@@ -14,25 +14,7 @@ function App() {
 
     <FotoProduk />
     <ProdukInfo isDiscount = "comming" name= "Ubud, Bali" category = "Indonesia" />
-
-      <div className="Review-box">
-        <h2>Reviews</h2>
-        <div className="Item">
-          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-          <div className="User">
-
-          <h3>Zuma Frog</h3>
-          <p>liburan asik senang bersama keluarga dibantu rhstravel</p>
-
-          </div>
-        </div>
-
-      </div>
-
-
-
-
-
+    <ReviewItems />
      { 
      /* 
      a + b / 1 
@@ -43,6 +25,50 @@ function App() {
   );
 }
 
+function ReviewItems() {
+  const users = [
+    {
+        "id": 1,
+        "name": "Masayoshi",
+        "review": "Harganya murah tapi kualitas bukan kaleng-kaleng nih. Keren.",
+        "photo": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+        "id": 2,
+        "name": "Shayna",
+        "review": "Harganya murah tapi kualitas bukan kaleng-kaleng nih. Keren.",
+        "photo": "https://images.pexels.com/photos/764529/pexels-photo-764529.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+        "id": 3,
+        "name": "Alqowy",
+        "review": "Harganya murah tapi kualitas bukan kaleng-kaleng nih. Keren.",
+        "photo": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    }
+];
+
+const listReviewItems = users.map((itemReview) =>
+  <div className="Item">
+  <img src= {itemReview.photo} />
+  <div className="User">
+
+<h3>{itemReview.name}</h3>
+  <p>{itemReview.review}</p>
+
+  </div>
+  </div>
+  );
+
+return(
+
+  <div className="Review-box">
+  <h2>Reviews</h2>
+  {listReviewItems}
+
+</div>
+);
+
+}
 
 function FotoProduk() {
   return (
