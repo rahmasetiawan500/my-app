@@ -13,7 +13,7 @@ function App() {
     <div className="Parentbox">
 
     <FotoProduk />
-    <ProdukInfo category = "Indonesia" />
+    <ProdukInfo name= "Ubud, Bali" category = "Indonesia" />
 
      { 
      /* 
@@ -38,17 +38,17 @@ function FotoProduk() {
 
 
 function ProdukInfo(props) {
-  const {category} = props ;
+  const {category, name} = props ;
   return (
     
     <div className="Deskripsi">
     <p className="Cate">{category}</p>
-    <h1 className="Title">Ubud, Bali</h1>
+    <h1 className="Title">{name}</h1>
     <p className="Price">IDR 25.678.677</p>
     <p className="Info">
     Aliqua et laboris adipisicing adipisicing sint est adipisicing tempor. Aliqua do in nulla ullamco proident. Nisi voluptate qui sunt elit eu pariatur sint sint ex ipsum. Labore sint ullamco officia commodo est. Voluptate eu et voluptate pariatur in. Lorem duis aliqua aliquip incididunt cillum amet.
     </p>
-    <a onClick={TambahJourney}>Add to Journey</a>
+    <a onClick={(e) =>TambahJourney(name, e)}>Add to Journey</a>
     </div>
     
 
@@ -56,8 +56,8 @@ function ProdukInfo(props) {
   
 }
 
-function TambahJourney(){
-  return console.log("membeli.....");
+function TambahJourney(e){
+  return console.log("membeli....." + e);
 }
 
 export default App;
